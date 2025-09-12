@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
+
+  <header>
+    <div class="profile-wrapper">
+      <img src="images/0ab7a074-da4a-4608-b8a4-887a573e51a1.png" alt="Profile Picture" class="profile-pic" />
+      <span class="circle"></span>
+      <span class="circle"></span>
+    </div>
+    <h1>Hi, I'm Rohit Vinay N </h1>
+    <p>Frontend Developer | Backend Developer | Creative Thinker | Lifelong Learner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+  Hi, I'm Rohit — a motivated web development intern with hands-on experience in building dynamic websites, 
+  implementing MySQL CRUD operations, and applying SEO best practices. I’ve worked with PHP, HTML, CSS, SQL, Python, 
+  and also explored Android Studio with Flutter, Dart, and basic Kotlin. 
+  <br><br>
+  I enjoy working with Python modules like Pandas, NumPy, Matplotlib, and BeautifulSoup for data analysis, visualization, 
+  and web scraping. Problem-solving through clean, efficient code excites me, and I’m always curious about new technologies.
+</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card-grid">
+      <div class="card">HTML5, CSS, JavaScript, PHP, Python, SQL, Java, R, C</div>
+      <div class="card">Android Studio <Kotlin>
+      <flutter></flutter></div>
+      <div class="card">Python Modules & APIs</div>
+      <div class="card">MySQL, XAMPP, Apache Server</div>
+      <div class="card">Git & GitHub</div>
+      <div class="card">VS Code, IntelliJ IDEA</div>
+      <div class="card">Windows 11, Linux</div>
+      <div class="card">Basic SEO & Accessibility</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filter-controls">
+      <div class="filter-buttons">
+        <button class="active" onclick="filterProjects('all', event)">All</button>
+        <button onclick="filterProjects('web', event)">Web Apps</button>
+        <button onclick="filterProjects('ui', event)">UI Designs</button>
+        <button onclick="filterProjects('other', event)">Other</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="🔍 Search projects...">
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item web show">
+        <figure>
+          <img src="images/Screenshot 2025-08-31 181747.png" alt="Portfolio Website">
+          <figcaption>Portfolio Website</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-item web show">
+        <figure>
+          <img src="images/Screenshot 2025-09-01 131107.png" alt="Fake News Detection API">
+          <figcaption>Fake News Detection API</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-item web show">
+        <figure>
+          <img src="images/IMG-20250901-WA0007.jpg" alt="AWS Inventory Management">
+          <figcaption>AWS Inventory Management</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-item ui show">
+        <figure>
+          <img src="images\kiraai.png" alt="Android App">
+          <figcaption>KiraAI Android App UI 
+            <i>Note: The project were created by me with the help of AI/Articles on my KnowledgeS</i>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-item ui show">
+        <figure>
+          <img src="images\kira.png" alt="homepage UI">
+          <figcaption>Kira homepage UI</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-item other show">
+        <figure>
+          <img src="images\featuresai.png" alt="Other Project">
+          <figcaption>Other Project</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rohit24vy@gmail.com">rohit24vy@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/rohitvinay24" target="_blank">rohitvinay24</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">Rohit vinay N</a></p>
+    <div class="social-links">
+      <a href="https://github.com/rohitvinay24" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> @Rohitvinay. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Project Preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

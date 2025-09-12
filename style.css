@@ -1,0 +1,238 @@
+:root {
+  --bg-light: #f9fafc;
+  --bg-dark: #121212;
+  --text-light: #2c3e50;
+  --text-dark: #ecf0f1;
+  --accent: #007acc67;
+  --accent-dark: #005b99;
+  --card-bg: #ffffff;
+  --card-dark-bg: #1e1e1e;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Animated profile wrapper */
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.profile-wrapper .profile-pic {
+  position: relative;
+  z-index: 2;
+}
+.profile-wrapper .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2.5s infinite;
+  z-index: 1;
+  opacity: 0.6;
+}
+.profile-wrapper .circle:nth-child(2) {
+  animation-delay: 1.2s;
+  border-color: var(--accent-dark);
+}
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  70% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+header h1 { font-size: 2.8em; margin: 10px 0; }
+header p { font-size: 1.2em; margin: 10px 0 25px; }
+
+/* --- Buttons --- */
+
+
+/* --- Navbar --- */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.05em;
+  position: relative;
+  padding: 6px 10px;
+}
+nav a:hover, nav a.active { color: var(--accent-dark); }
+nav a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+/* --- Sections --- */
+section { max-width: 1100px; margin: auto; padding: 70px 20px; }
+h2 { color: var(--accent); margin-bottom: 35px; text-align: center; font-size: 2.2em; font-weight: bold; }
+.about-text { text-align:center; max-width:800px; margin:auto; }
+
+/* --- Cards --- */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+/* --- Filter Controls --- */
+.filter-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 35px; }
+.filter-buttons button {
+  background: var(--accent);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filter-buttons button.active,
+.filter-buttons button:hover { background: var(--accent-dark); transform: translateY(-2px); }
+#searchInput { padding: 10px 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 1em; }
+#searchInput:focus { border-color: var(--accent); }
+
+/* --- Gallery --- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.gallery-item { opacity: 0; transform: scale(0.9); transition: 0.4s; display: none; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+.gallery-item.show { display: block; opacity: 1; transform: scale(1); }
+.gallery-item img { width: 100%; border-radius: 12px; transition: transform 0.4s; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+
+
+.gallery-item figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s;
+  display: block;
+}
+
+.gallery-item figcaption {
+  margin-top: 8px;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.dark-mode .gallery-item figcaption {
+  color: var(--text-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Modal --- */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; }
+.modal img { max-width: 90%; max-height: 80%; border-radius: 14px; box-shadow: 0 4px 25px rgba(0,0,0,0.6); }
+.modal span { position: absolute; top: 25px; right: 35px; color: white; font-size: 2.2em; cursor: pointer; }
+
+/* --- Social Links --- */
+.social-links { margin-top: 20px; text-align: center; }
+.social-links a { margin: 0 12px; font-size: 1.6em; color: var(--accent); transition: 0.3s; }
+.social-links a:hover { color: var(--accent-dark); transform: scale(1.1); }
+
+/* --- Footer --- */
+footer { text-align: center; padding: 25px; font-size: 0.95em; background: #f1f1f1; margin-top: 50px; }
+
+/* --- Dark Mode --- */
+.dark-mode { background: var(--bg-dark); color: var(--text-dark); }
+.dark-mode nav { background: var(--bg-dark); border-color: #333; }
+.dark-mode nav a { color: #90caf9; }
+.dark-mode .card { background: var(--card-dark-bg); }
+.dark-mode .btn { background: var(--accent); color: white; }
+.dark-mode footer { background: #1e1e1e; color: #ccc; }
+
+/* --- Toggle Button --- */
+.toggle-btn {
+  position: fixed; top: 20px; right: 20px;
+  background: var(--accent); color: white;
+  border: none; padding: 10px 16px;
+  cursor: pointer; border-radius: 8px;
+  font-size: 14px; box-shadow: var(--shadow);
+  transition: background 0.3s; z-index: 1001;
+}
+.toggle-btn:hover { background: var(--accent-dark); }
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2.2em; }
+  nav { flex-wrap: wrap; }
+}
