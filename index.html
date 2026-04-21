@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Rohit Vinay N — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -12,45 +12,78 @@
 
   <header>
     <div class="profile-wrapper">
-      <img src="images/0ab7a074-da4a-4608-b8a4-887a573e51a1.png" alt="Profile Picture" class="profile-pic" />
+      <img src="images/0ab7a074-da4a-4608-b8a4-887a573e51a1.png" alt="Rohit Vinay N" class="profile-pic" />
       <span class="circle"></span>
       <span class="circle"></span>
     </div>
-    <h1>Hi, I'm Rohit Vinay N </h1>
-    <p>Frontend Developer | Backend Developer | Creative Thinker | Lifelong Learner</p>
+    <h1>Hi, I'm Rohit Vinay N</h1>
+    <p>Full-Stack Developer &nbsp;·&nbsp; Systems Programmer &nbsp;·&nbsp; OS Developer &nbsp;·&nbsp; Creative Problem Solver</p>
+    <div class="header-badges">
+      <span class="badge">🖥 Built a Bare-Metal x86-64 OS</span>
+      <span class="badge">🌐 Full-Stack Web Dev</span>
+      <span class="badge">📱 Android &amp; Flutter</span>
+      <span class="badge">🐍 Python &amp; Data</span>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#others">Others</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>
-  Hi, I'm Rohit — a motivated web development intern with hands-on experience in building dynamic websites, 
-  implementing MySQL CRUD operations, and applying SEO best practices. I’ve worked with PHP, HTML, CSS, SQL, Python, 
-  and also explored Android Studio with Flutter, Dart, and basic Kotlin. 
-  <br><br>
-  I enjoy working with Python modules like Pandas, NumPy, Matplotlib, and BeautifulSoup for data analysis, visualization, 
-  and web scraping. Problem-solving through clean, efficient code excites me, and I’m always curious about new technologies.
-</p>
+    <p class="about-text">
+      I'm Rohit — a developer who builds things from the ground up. Most recently I designed and built
+      <strong>KalOS</strong>, a fully custom x86-64 operating system written entirely in C and Assembly,
+      running on real hardware with a desktop GUI, networking stack, file manager, text editor, and more —
+      all without any external OS libraries.<br><br>
+      Beyond systems programming, I bring hands-on full-stack experience building dynamic websites,
+      MySQL CRUD applications, and REST APIs with PHP, Python, JavaScript, SQL, Kotlin, and Flutter.
+      I use Python (Pandas, NumPy, Matplotlib, BeautifulSoup) for data analysis and scraping.
+      I care about clean, efficient code and I'm always curious about how things work at the lowest level.
+    </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <div class="card-grid">
-      <div class="card">HTML5, CSS, JavaScript, PHP, Python, SQL, Java, R, C</div>
-      <div class="card">Android Studio <Kotlin>
-      <flutter></flutter></div>
-      <div class="card">Python Modules & APIs</div>
-      <div class="card">MySQL, XAMPP, Apache Server</div>
-      <div class="card">Git & GitHub</div>
-      <div class="card">VS Code, IntelliJ IDEA</div>
-      <div class="card">Windows 11, Linux</div>
-      <div class="card">Basic SEO & Accessibility</div>
+    <div class="skills-category">
+      <h3 class="skill-heading">⚙️ Systems &amp; Low-Level</h3>
+      <div class="card-grid">
+        <div class="card skill-highlight">x86-64 Assembly (NASM)</div>
+        <div class="card skill-highlight">C — Kernel / Bare-Metal</div>
+        <div class="card skill-highlight">OS Development</div>
+        <div class="card">GRUB Multiboot</div>
+        <div class="card">Memory Management (Paging, Heap)</div>
+        <div class="card">Hardware Drivers (PCI, AHCI, USB, NIC)</div>
+        <div class="card">TCP/IP Networking Stack</div>
+        <div class="card">FAT32 / ext2 / Custom FS</div>
+      </div>
+    </div>
+    <div class="skills-category">
+      <h3 class="skill-heading">🌐 Web &amp; Backend</h3>
+      <div class="card-grid">
+        <div class="card">HTML5, CSS3, JavaScript</div>
+        <div class="card">PHP &amp; MySQL</div>
+        <div class="card">Python (Flask / Scripts)</div>
+        <div class="card">REST APIs</div>
+        <div class="card">XAMPP / Apache Server</div>
+        <div class="card">Basic SEO &amp; Accessibility</div>
+      </div>
+    </div>
+    <div class="skills-category">
+      <h3 class="skill-heading">📱 Mobile &amp; Data</h3>
+      <div class="card-grid">
+        <div class="card">Android Studio (Kotlin)</div>
+        <div class="card">Flutter &amp; Dart</div>
+        <div class="card">Pandas, NumPy, Matplotlib</div>
+        <div class="card">BeautifulSoup (Web Scraping)</div>
+        <div class="card">Git &amp; GitHub</div>
+        <div class="card">Linux, Windows 11, QEMU</div>
+      </div>
     </div>
   </section>
 
@@ -73,54 +106,163 @@
           <figcaption>Portfolio Website</figcaption>
         </figure>
       </div>
-
       <div class="gallery-item web show">
         <figure>
           <img src="images/Screenshot 2025-09-01 131107.png" alt="Fake News Detection API">
           <figcaption>Fake News Detection API</figcaption>
         </figure>
       </div>
-
       <div class="gallery-item web show">
         <figure>
           <img src="images/IMG-20250901-WA0007.jpg" alt="AWS Inventory Management">
           <figcaption>AWS Inventory Management</figcaption>
         </figure>
       </div>
-
       <div class="gallery-item ui show">
         <figure>
-          <img src="images\kiraai.png" alt="Android App">
-          <figcaption>KiraAI Android App UI 
-            <i>Note: The project were created by me with the help of AI/Articles on my KnowledgeS</i>
-          </figcaption>
+          <img src="images/kiraai.png" alt="KiraAI Android App UI">
+          <figcaption>KiraAI Android App UI</figcaption>
         </figure>
       </div>
-
       <div class="gallery-item ui show">
         <figure>
-          <img src="images\kira.png" alt="homepage UI">
-          <figcaption>Kira homepage UI</figcaption>
+          <img src="images/kira.png" alt="Kira Homepage UI">
+          <figcaption>Kira Homepage UI</figcaption>
         </figure>
       </div>
-
       <div class="gallery-item other show">
         <figure>
-          <img src="images\featuresai.png" alt="Other Project">
-          <figcaption>Other Project</figcaption>
+          <img src="images/featuresai.png" alt="AI Features Project">
+          <figcaption>AI Features Project</figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- KalOS OTHERS SECTION -->
+  <section id="others">
+    <h2>Other Works</h2>
+
+    <div class="kalos-showcase">
+      <div class="kalos-header">
+        <div class="kalos-logo-wrap">
+          <span class="kalos-logo-icon">🖥</span>
+          <div>
+            <h3 class="kalos-title">KalOS <span class="kalos-version">v2.0 Alpha</span></h3>
+            <p class="kalos-subtitle">Custom x86-64 Bare-Metal Operating System — Built from Scratch</p>
+          </div>
+        </div>
+        <div class="kalos-tags">
+          <span class="tag tag-lang">C</span>
+          <span class="tag tag-lang">x86-64 ASM</span>
+          <span class="tag tag-sys">Bare-Metal</span>
+          <span class="tag tag-sys">GRUB Multiboot</span>
+          <span class="tag tag-sys">Ring 0 / Ring 3</span>
+          <span class="tag tag-sys">QEMU + Real Hardware</span>
+        </div>
+      </div>
+
+      <div class="kalos-body">
+        <div class="kalos-screenshot-wrap">
+          <img src="images/kalos_os.svg" alt="KalOS Desktop — File Manager, Text Editor, Task Manager and Shell" class="kalos-screenshot" />
+          <div class="kalos-screenshot-caption">KalOS Desktop — File Manager, Kal Text Editor, Task Manager &amp; Shell running simultaneously</div>
+        </div>
+
+        <div class="kalos-desc">
+          <p>
+            KalOS is a <strong>fully custom operating system built entirely from scratch</strong> — no Linux,
+            no Windows, no POSIX. Every component is hand-written in C and x86-64 Assembly: from the bootloader
+            handoff through GDT/IDT setup, paging, memory management, PCI scanning, hardware drivers, a full
+            desktop GUI, networking, and a multi-filesystem VFS. It boots on QEMU and real x86-64 hardware.
+          </p>
+
+          <div class="kalos-features">
+            <div class="kalos-feature-group">
+              <h4>🏗 Kernel &amp; Architecture</h4>
+              <ul>
+                <li>x86-64 Long Mode, 4-level paging</li>
+                <li>Custom GDT, IDT, TSS</li>
+                <li>Physical &amp; virtual memory manager</li>
+                <li>Preemptive multitasking scheduler</li>
+                <li>Ring 0/3 privilege separation</li>
+                <li>INT 0x80 syscall interface</li>
+                <li>ACPI, APIC, PCI bus scanning</li>
+              </ul>
+            </div>
+            <div class="kalos-feature-group">
+              <h4>🖥 GUI &amp; Applications</h4>
+              <ul>
+                <li>VESA/VBE framebuffer at 1366×768×32bpp</li>
+                <li>Multi-window desktop with taskbar</li>
+                <li>File Manager (CRUD, search, disk persist)</li>
+                <li>Kal Text Editor (syntax highlighting)</li>
+                <li>Task Manager (live CPU/RAM/process stats)</li>
+                <li>Media Player, Browser, Image Viewer</li>
+                <li>CKAL Scripting Language + IDE</li>
+              </ul>
+            </div>
+            <div class="kalos-feature-group">
+              <h4>🔌 Hardware Drivers</h4>
+              <ul>
+                <li>Intel e1000 &amp; RTL8139 NIC drivers</li>
+                <li>AHCI SATA controller</li>
+                <li>USB HID (xHCI keyboard + mouse)</li>
+                <li>Intel HDA audio driver</li>
+                <li>PS/2 keyboard &amp; mouse</li>
+                <li>ATA/PIO disk driver</li>
+                <li>VGA text + VESA graphics</li>
+              </ul>
+            </div>
+            <div class="kalos-feature-group">
+              <h4>🌐 Networking &amp; Storage</h4>
+              <ul>
+                <li>Ethernet / IPv4 / UDP stack</li>
+                <li>DHCP client, DNS resolver</li>
+                <li>Custom KalFS filesystem</li>
+                <li>FAT32 read/write support</li>
+                <li>ext2 filesystem support</li>
+                <li>VFS abstraction layer</li>
+                <li>ATA disk persistence across reboots</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="kalos-stats">
+            <div class="kalos-stat">
+              <span class="stat-num">50,000+</span>
+              <span class="stat-label">Lines of Code</span>
+            </div>
+            <div class="kalos-stat">
+              <span class="stat-num">60+</span>
+              <span class="stat-label">Source Files</span>
+            </div>
+            <div class="kalos-stat">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Hardware Drivers</span>
+            </div>
+            <div class="kalos-stat">
+              <span class="stat-num">x86-64</span>
+              <span class="stat-label">Architecture</span>
+            </div>
+          </div>
+
+          <div class="kalos-tech-line">
+            <strong>Built with:</strong>&nbsp; C (x86_64-elf-gcc cross-compiler) &nbsp;·&nbsp; NASM &nbsp;·&nbsp;
+            GNU ld &nbsp;·&nbsp; GRUB 2 &nbsp;·&nbsp; QEMU &nbsp;·&nbsp; Python (icon tooling pipeline)
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:rohit24vy@gmail.com">rohit24vy@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/rohitvinay24" target="_blank">rohitvinay24</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">Rohit vinay N</a></p>
+    <p>Email: <a href="mailto:">rohitvinay24@example.com</a></p>
+    <p>GitHub: <a href="" target="_blank">rohitvinay24</a></p>
+    <p>LinkedIn: <a href="" target="_blank">Rohit Vinay N</a></p>
     <div class="social-links">
-      <a href="https://github.com/rohitvinay24" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
@@ -128,7 +270,6 @@
     <p>© <span id="year"></span> @Rohitvinay. All rights reserved.</p>
   </footer>
 
-  <!-- Modal -->
   <div id="modal" class="modal">
     <span onclick="closeModal()">&times;</span>
     <img id="modal-img" src="" alt="Project Preview">
@@ -137,4 +278,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
